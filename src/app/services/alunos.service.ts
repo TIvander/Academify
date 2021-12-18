@@ -29,8 +29,8 @@ export class AlunosService {
     return this.httpClient.put(`${this.baseUrl}/api/aluno/editar`, aluno)
   }
 
-  deleteAluno(aluno: Aluno): Observable<Object>{
-    return this.httpClient.delete(`${this.baseUrl}/api/aluno/remover/${aluno}`)
+  deleteAluno(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl}/api/aluno/remove/${id}`)
   }
 }
 

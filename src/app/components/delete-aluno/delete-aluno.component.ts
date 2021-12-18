@@ -15,20 +15,17 @@ export class DeleteAlunoComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    this.alunoService.getAlunoById(this.id).subscribe(data =>{
-      this.aluno = data;
-      this.alunoService.deleteAluno(this.aluno).subscribe(data =>{
-        this.goToalunoList();
-      },error => console.log(error));
-
-    },error => console.log(error));
-
-
+    this.deleteAluno(this.id);
+  }
+  deleteAluno(id: number){
+    this.alunoService.deleteAluno(id).subscribe( data => {
+      console.log(data);
+      this.goToalunoList();
+    })
   }
   goToalunoList(){
     this.router.navigate(['api/aluno/listar']);
   }
 
 }
-
 
