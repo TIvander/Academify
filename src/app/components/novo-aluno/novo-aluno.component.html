@@ -1,0 +1,22 @@
+<h1>Cadastro de Alunos</h1>
+<div class="col-md-8 offset-md-3">
+<form (ngSubmit) = "onSubmit()">
+  <div class="form-group">
+    <label for="matricula">Matrícula</label>
+    <input class="form-control" id="matricula" [(ngModel)]="aluno.matricula" name="matricula">
+  </div> <br>
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input class="form-control" id="nome" [(ngModel)]="aluno.nome" name="nome">
+  </div> <br>
+  <div class="form-group">
+    <label for="dataCadastro">Data de Cadastro</label>
+    <input type="date" class="form-control" id="dataCadastro" [(ngModel)]="aluno.dataHoraCadastro" name="dataCadastro">
+  </div> <br>
+  <div class="form-group">
+    <label for="dataNascimento">Data de Nacimento</label>
+    <input type="date" class="form-control" id="dataNascimento" [(ngModel)]="aluno.nascimento" name="dataNascimento">
+  </div> <br>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+</div>

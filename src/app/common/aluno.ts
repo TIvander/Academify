@@ -1,4 +1,8 @@
 export class Aluno {
-  nome: string = "";
-  matricula: number | undefined;
+  id?: number;
+  nome?: string ;
+  matricula?: number ;
+  dataHoraCadastro?: Date;
+  nascimento?: Date;
 }
+

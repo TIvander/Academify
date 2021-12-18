@@ -1,0 +1,17 @@
+
+<h1>Edição de Alunos</h1>
+<div class="col-md-8 offset-md-3">
+  <form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+      <label for="matricula">Matrícula</label>
+      <input class="form-control" id="matricula" [(ngModel)]="aluno.matricula" name="matricula" required>
+    </div> <br>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input class="form-control" id="nome" [(ngModel)]="aluno.nome" name="nome" required>
+    </div> <br>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+  </form>
+</div>
+

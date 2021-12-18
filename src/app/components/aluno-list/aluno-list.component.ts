@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AlunosService} from "../../services/alunos.service";
 import {Aluno} from "../../common/aluno";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-aluno-list',
@@ -10,7 +11,8 @@ import {Aluno} from "../../common/aluno";
 export class AlunoListComponent implements OnInit {
 
   alunos: Aluno[] = [];
-  constructor(private alunoService: AlunosService) { }
+
+  constructor(private alunoService: AlunosService, private router: Router) { }
 
   ngOnInit(): void {
     this.listAlunos();
@@ -22,4 +24,5 @@ export class AlunoListComponent implements OnInit {
       }
     )
   }
+
 }

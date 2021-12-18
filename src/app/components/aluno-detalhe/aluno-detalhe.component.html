@@ -1,0 +1,15 @@
+<h1>Informações do Aluno</h1>
+  <div>
+    <div>
+      <label> <b>Nome: </b></label> {{ aluno.nome }}
+    </div>
+    <div>
+      <label> <b>Matricula: </b></label> {{ aluno.matricula }}
+    </div>
+    <div>
+      <label> <b>Cadastro: </b></label> {{ aluno.dataHoraCadastro  | date: 'dd/MM/yyyy'}}
+    </div>
+    <div>
+      <label> <b>Data de Nascimento: </b></label> {{ aluno.nascimento  | date: 'dd/MM/yyyy'}}
+    </div>
+  </div>
